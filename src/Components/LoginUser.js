@@ -28,11 +28,6 @@ const LoginUser = () => {
     const res = await fetch("http://localhost:4000/login", options);
     const data = await res.json();
     console.log(data);
-    if (data.success) {
-      nav("/");
-    } else {
-      setError(data.message);
-    }
 
     const user = getUsers.find(
       (x) => x.username === userData.email && x.password === userData.password

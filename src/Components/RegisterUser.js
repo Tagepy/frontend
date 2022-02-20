@@ -43,7 +43,7 @@ const RegisterUser = () => {
 
     setUsers([...getUsers, user]);
     if (data.success) {
-      nav("/login");
+      nav("/");
     } else {
       setError(data.message);
     }
